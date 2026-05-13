@@ -3,26 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Brisa do Mar - Projeto Final</title>
+    <title>Hotel Brisa do Mar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Customizado -->
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <section class="container-secao">
-        <div class="card-noivas">
-            <div class="bloco-imagem">
-                <img src="./img/img 15.png" alt="Evento de Casamento no Hotel Brisa do Mar">
+
+    <section class="container-secao py-5">
+        <div class="container">
+            <!-- Título principal com classe própria para não herdar estilos dos cards -->
+            <h1 class="secao-titulo mb-5">Pacotes</h1>
+            
+            <!-- row-cols define a quantidade de cards por linha de forma responsiva -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center"> 
+                
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/img 02.png" class="card-img-top" alt="Pacote Aliança & Mar">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title mb-4">Aliança & Mar</h5>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modal1">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/IMG 04.png" class="card-img-top" alt="Pacote Brisa Romântica">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title mb-4">Brisa Romântica</h5>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modal2">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <img src="./img/" class="card-img-top" alt="Pacote Amor à Beira-Mar">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title mb-4">Amor à Beira-Mar</h5>
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modal3">Ver</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="bloco-texto">
-                <h1>Garanta sua reserva no <br> Hotel Brisa do Mar</h1>
-                <p>Viva momentos inesquecíveis com nossos pacotes exclusivos do <strong>Mês das Noivas</strong>.</p>
-                <span class="info-validade">Promoção válida por tempo limitado.</span>
-                <div class="acoes">
-                    <a href="#" class="btn-link"><i class="fab fa-whatsapp"></i> RESERVAR PELO WHATSAPP</a>
-                    <a href="#" class="btn-link"><i class="far fa-calendar-alt"></i> CONSULTAR DISPONIBILIDADE</a>
+        </div>
+    </section>
+
+
+    <!-- ================= ESTRUTURA DOS MODAIS ================= -->
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title-custom fw-bold" id="modal1Label">Pacote Aliança & Mar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted mb-4">Uma celebração íntima e inesquecível. Ideal para casais que optam pelo casamento a dois ou com pouquíssimos convidados, focando na intensidade do momento e na beleza do local.</p>
+                    <ul class="list-group list-group-flush class-list">
+                        <li class="list-group-item bg-transparent">✓ Cerimônia no deck panorâmico durante o pôr do sol, com montagem de altar exclusiva e sonorização ambiente.</li>
+                        <li class="list-group-item bg-transparent">✓ Coquetel autoral com finger foods de frutos do mar e bolo artístico assinado pelo chef.</li>
+                        <li class="list-group-item bg-transparent">✓ Um ensaio fotográfico profissional (40 min) aproveitando a "hora dourada" do hotel e um voucher de jantar de 1º aniversário de casamento.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Reservar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title-custom fw-bold" id="modal2Label">Pacote Brisa Romântica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted mb-4">Conforto e sofisticação para os noivos e seus convidados VIP. Pensado para quem quer transformar o casamento em um final de semana inteiro de celebração e memórias.</p>
+                    <ul class="list-group list-group-flush class-list">
+                        <li class="list-group-item bg-transparent">✓ Bloqueio exclusivo de uma ala de suítes, garantindo que os convidados mais próximos vivam a experiência do hotel.</li>
+                        <li class="list-group-item bg-transparent">✓ Welcome Drink no rooftop com vista para a baía e jantar de boas-vindas na noite anterior ao evento.</li>
+                        <li class="list-group-item bg-transparent">✓ Concierge Dedicado disponível 24h para atender qualquer necessidade dos noivos e um kit de amenidades exclusivas (velas e óleos) em todos os quartos reservados.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Reservar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title-custom fw-bold" id="modal3Label">Pacote Amor à Beira-Mar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted mb-4">Exclusividade e diversão entre amigas em um ambiente sofisticado. Ideal para a noiva que quer celebrar os últimos dias de solteira com elegância, fugindo do óbvio.</p>
+                    <ul class="list-group list-group-flush class-list">
+                        <li class="list-group-item bg-transparent">✓ Reserva exclusiva do Lounge Garden ou área da piscina privativa durante uma tarde. Inclui decoração temática "Tropical Chic" com flores da estação.</li>
+                        <li class="list-group-item bg-transparent">✓ Estação de drinks autorais (clericot, gin tônica com especiarias) e menu de finger foods leves e sofisticados.</li>
+                        <li class="list-group-item bg-transparent">✓ Uma aula particular de Yoga ou Meditação de frente para o mar para o grupo, focada no relaxamento pré-casamento.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-success">Reservar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- ================= SEÇÃO: ACOMODAÇÕES (CARROSSEL COM 4 IMAGENS) ================= -->
+    <section class="secao-acomodacoes py-5">
+        <div class="container">
+            <h1 class="secao-titulo mb-5">Acomodações</h1>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <div id="carouselAcomodacoes" class="carousel slide shadow" data-bs-ride="carousel">
+                        
+                        <!-- 1. INDICADORES ATUALIZADOS (Adicionado o botão para o slide 3) -->
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselAcomodacoes" data-bs-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselAcomodacoes" data-bs-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselAcomodacoes" data-bs-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselAcomodacoes" data-bs-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        
+                        <!-- 2. CONTEÚDO DOS SLIDES (Agora com 4 itens) -->
+                        <div class="carousel-inner">
+                            
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <img src="./img/img 05.png" class="d-block w-100 carousel-img" alt="Suíte Standard">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Suíte Standard</h5>
+                                    <p>Conforto sob medida com vista lateral para o mar.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <img src="./img/img 06.png" class="d-block w-100 carousel-img" alt="Suíte Luxo">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Suíte Luxo Master</h5>
+                                    <p>Varanda privativa panorâmica e hidromassagem inclusa.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <img src="./img/img 07" class="d-block w-100 carousel-img" alt="Suíte Presidencial">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Suíte Presidencial</h5>
+                                    <p>A experiência máxima do hotel com piscina privativa.</p>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 (NOVO SLIDE ADICIONADO) -->
+                            <div class="carousel-item">
+                                <img src="./img/img" class="d-block w-100 carousel-img" alt="Bangalô Premium">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Bangalô Premium</h5>
+                                    <p>Privacidade total com acesso direto e exclusivo à praia.</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- Controles Laterais -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselAcomodacoes" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselAcomodacoes" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                        
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
