@@ -1,95 +1,170 @@
-
-/*SEÇÃO4 - JÚLIO CÉSAR */
-:root { 
-    --cor-primaria: #634b61; 
-    --cor-fundo: #f5f5f5; 
-    --cor-botao: #d9d9d9; 
-    --texto-cor: #555;
+/* ==========================================================================
+   1. CONFIGURAÇÕES DA SEÇÃO / BACKGROUND
+   ========================================================================== */
+.container-secao {
+    background-image: url('../img/img 12.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 0;
+    min-height: 100vh;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-
-body { 
-    background: var(--cor-fundo); 
-    display: grid; 
-    place-items: center; 
-    min-height: 100vh; 
-    padding: 20px; 
+.secao-titulo {
+    color: #6b4a6b;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
-.card-noivas { 
-    background: #fff; 
-    display: flex; 
-    align-items: center; 
-    max-width: 1000px; 
+/* ==========================================================================
+   2. CARDS DE ACOMODAÇÃO / PACOTES
+   ========================================================================== */
+.card {
+    border: none;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
     width: 100%;
-    overflow: hidden; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.bloco-imagem { 
-    flex: 0 0 45%; 
-    display: flex; 
-    align-items: center;
+.card-title {
+    color: #6b4a6b;
+    font-weight: bold;
+    text-align: center;
 }
 
-.bloco-imagem img { 
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 0 50px 50px 0; 
-    transform: scale(1.05); /* Pequeno ajuste de escala para preenchimento */
+/* ==========================================================================
+   3. ESTILIZAÇÃO DOS MODAIS
+   ========================================================================== */
+.modal-content {
+    border: none;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px;
 }
 
-.bloco-texto { 
-    flex: 1; 
-    padding: 40px 60px; 
-    color: var(--texto-cor); 
+.modal-header, 
+.modal-footer {
+    border: none;
 }
 
-.bloco-texto h1 { 
-    color: var(--cor-primaria); 
-    font-size: 2.1rem; 
-    margin-bottom: 20px; 
-    line-height: 1.1; 
+.modal-title-custom {
+    color: #6b4a6b;
+    font-size: 1.5rem;
 }
 
-.bloco-texto p { 
-    font-size: 1.05rem; 
-    line-height: 1.5; 
-    margin-bottom: 8px; 
+.class-list .list-group-item {
+    color: #495057;
+    padding: 12px 0;
+    border-color: rgba(107, 74, 107, 0.1);
 }
 
-.bloco-texto strong { color: var(--cor-primaria); }
-
-.info-validade { 
-    display: block;
-    color: #999; 
-    font-size: 0.9rem; 
-    margin-bottom: 35px; 
+/* ==========================================================================
+   4. COMPONENTES DE BOTÕES
+   ========================================================================== */
+.btn-primary {
+    background-color: #6b4a6b;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.acoes { display: flex; flex-direction: column; gap: 15px; }
-
-.btn-link { 
-    background: var(--cor-botao); 
-    color: var(--cor-primaria); 
-    text-decoration: none; 
-    padding: 14px 20px; 
-    font-weight: bold; 
-    font-size: 0.9rem; 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; 
-    transition: all 0.3s ease; 
+.btn-primary:hover, 
+.btn-primary:focus {
+    background-color: #533953;
 }
 
-.btn-link:hover { filter: brightness(0.95); transform: translateX(5px); }
-
-@media (max-width: 850px) {
-    .card-noivas { flex-direction: column; border-radius: 30px; }
-    .bloco-imagem { flex: none; width: 100%; }
-    .bloco-imagem img { border-radius: 30px; transform: none; }
-    .bloco-texto { padding: 30px; text-align: center; }
-    .btn-link { justify-content: center; }
+.btn-primary:active {
+    transform: scale(0.98);
 }
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+}
+
+.btn-success {
+    background-color: #6b4a6b;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 24px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-success:hover {
+    background-color: #533953;
+}
+
+
+/* ==========================================================================
+   5. CONFIGURAÇÕES DO CARROSSEL DE ACOMODAÇÕES
+   ========================================================================== */
+.carousel {
+    border-radius: 30px; /* Mesma curvatura aplicada aos seus cards */
+    overflow: hidden;
+}
+
+.carousel-img {
+    height: 500px; /* Altura padrão para telas grandes */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Legendas em cima das fotos estilizadas com o efeito fosco do seu modal */
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.9); /* Mesma cor de fundo dos cards */
+    border-radius: 20px;
+    padding: 15px 25px;
+    bottom: 5%;
+    color: #495057; /* Mesma cor de texto usada na lista do modal */
+    text-align: left; /* Alinha o texto do carrossel de forma elegante */
+    max-width: 80%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption h5 {
+    color: #6b4a6b; /* Mesma cor roxa do hotel usada nos títulos principais */
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Estilização das barras indicadoras usando a cor roxa do hotel */
+.carousel-indicators [data-bs-target] {
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #6b4a6b; /* Destaque com o tom roxo da identidade visual */
+    width: 50px;
+}
+
