@@ -1,13 +1,22 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES DA SEÇÃO / BACKGROUND
-   ========================================================================== */
-.container-secao {
-    background-image: url('../img/img 12.jpg');
+/* 1. CONFIGURAÇÕES DA SEÇÃO / BACKGROUND */
+.img-fundo {
+    background-image: url('../img/img 12.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 80px 0;
-    min-height: 100vh;
+    padding: 40px 0; 
+    min-height: auto; 
+}
+
+.container-secao {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 0; 
+}
+
+.secao-acomodacoes {
+    padding: 40px 0; 
 }
 
 .secao-titulo {
@@ -16,9 +25,7 @@
     font-size: 2.5rem;
 }
 
-/* ==========================================================================
-   2. CARDS DE ACOMODAÇÃO / PACOTES
-   ========================================================================== */
+/*2. CARDS DE ACOMODAÇÃO / PACOTES */
 .card {
     border: none;
     border-radius: 30px;
@@ -44,9 +51,7 @@
     text-align: center;
 }
 
-/* ==========================================================================
-   3. ESTILIZAÇÃO DOS MODAIS
-   ========================================================================== */
+/*3. ESTILIZAÇÃO DOS MODAIS */
 .modal-content {
     border: none;
     border-radius: 30px;
@@ -72,9 +77,7 @@
     border-color: rgba(107, 74, 107, 0.1);
 }
 
-/* ==========================================================================
-   4. COMPONENTES DE BOTÕES
-   ========================================================================== */
+/* 4. COMPONENTES DE BOTÕES */
 .btn-primary {
     background-color: #6b4a6b;
     border: none;
@@ -113,35 +116,31 @@
     background-color: #533953;
 }
 
-
-/* ==========================================================================
-   5. CONFIGURAÇÕES DO CARROSSEL DE ACOMODAÇÕES
-   ========================================================================== */
+/* 5. CONFIGURAÇÕES DO CARROSSEL DE ACOMODAÇÕES */
 .carousel {
-    border-radius: 30px; /* Mesma curvatura aplicada aos seus cards */
+    border-radius: 30px;
     overflow: hidden;
 }
 
 .carousel-img {
-    height: 500px; /* Altura padrão para telas grandes */
+    height: 500px;
     object-fit: cover;
     width: 100%;
 }
 
-/* Legendas em cima das fotos estilizadas com o efeito fosco do seu modal */
 .carousel-caption {
-    background-color: rgba(255, 255, 255, 0.9); /* Mesma cor de fundo dos cards */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     padding: 15px 25px;
     bottom: 5%;
-    color: #495057; /* Mesma cor de texto usada na lista do modal */
-    text-align: left; /* Alinha o texto do carrossel de forma elegante */
+    color: #495057;
+    text-align: left;
     max-width: 80%;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-caption h5 {
-    color: #6b4a6b; /* Mesma cor roxa do hotel usada nos títulos principais */
+    color: #6b4a6b;
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 5px;
@@ -152,7 +151,6 @@
     margin-bottom: 0;
 }
 
-/* Estilização das barras indicadoras usando a cor roxa do hotel */
 .carousel-indicators [data-bs-target] {
     width: 35px;
     height: 5px;
@@ -164,7 +162,6 @@
 
 .carousel-indicators .active {
     opacity: 1;
-    background-color: #6b4a6b; /* Destaque com o tom roxo da identidade visual */
+    background-color: #6b4a6b;
     width: 50px;
 }
-
