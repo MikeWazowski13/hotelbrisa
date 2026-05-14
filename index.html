@@ -8,15 +8,58 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Customizado -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body> 
+    <div class="isaque">
+        <div header="container-navbar">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                         <a class="nav-link" href="#">SOBRE NÓS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pacotes1">PACOTES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#acomodacoes1">ACOMODAÇÕES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#card-noivas">CONTATOS</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            
+        </div> 
+
+        <div id="tela1">
+
+            <div class="texto">
+                <h1><strong>Mês das Noivas</strong></h1>
+                <p>Celebre o Mês das Noivas em um destino onde o horizonte é a sua testemunha. Desfrute de condições exclusivas e mimos únicos para transformar o seu "sim" em um memória eterna à beira-mar!</p>
+
+                <div class="botoes">
+                    <button type="button" id="botoes1" class="btn btn-primary btn-lg">
+                        CONHEÇA NOSSOS PACOTES
+                    </button>
+
+                    <button type="button" id="botoes2" class="btn btn-secondary btn-lg">
+                        RESERVE AGORA
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
     <div class="img-fundo">
 
     <section class="container-secao py-5">
         <div class="container">
             <!-- Título principal com classe própria para não herdar estilos dos cards -->
-            <h1 class="secao-titulo mb-5">Pacotes</h1>
+            <h1 id="pacotes1"  class="secao-titulo mb-5">Pacotes</h1>
             
             <!-- row-cols define a quantidade de cards por linha de forma responsiva -->
             <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center"> 
@@ -61,7 +104,7 @@
     <!-- SEÇÃO: ACOMODAÇÕES (CARROSSEL CORRIGIDO COM 4 SLIDES E LEGENDAS) -->
     <section class="secao-acomodacoes py-3">
         <div class="container">
-            <h1 class="secao-titulo mb-5">Acomodações</h1>
+            <h1 id="acomodacoes1" class="secao-titulo mb-5">Acomodações</h1>
             
             <!-- Adicionado as classes 'shadow' para design e 'data-bs-ride="carousel"' para transição automática -->
             <div id="carouselExampleIndicators" class="carousel slide shadow" data-bs-ride="carousel" data-bs-interval="5000">
@@ -205,6 +248,23 @@
             </div>
         </div>
     </div>
+
+    <section class="container-secao1" id="card-noivas">
+        <div class="card-noivas" >
+            <div class="bloco-imagem" >
+                <img src="img/imagemsecao4.png" alt="Evento de Casamento no Hotel Brisa do Mar">
+            </div>
+            <div class="bloco-texto">
+                <h1>Garanta sua reserva no <br> Hotel Brisa do Mar</h1>
+                <p>Viva momentos inesquecíveis com nossos pacotes exclusivos do <strong>Mês das Noivas</strong>.</p>
+                <span class="info-validade">Promoção válida por tempo limitado.</span>
+                <div class="acoes">
+                    <a href="#" class="btn-link"><i class="fab fa-whatsapp"></i> RESERVAR PELO WHATSAPP</a>
+                    <a href="#" class="btn-link"><i class="far fa-calendar-alt"></i> CONSULTAR DISPONIBILIDADE</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
