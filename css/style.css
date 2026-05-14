@@ -336,6 +336,18 @@ body {
     width: 50px;
 }
 
+/*SEÇÃO3 - Luiz Fernando */
+.vantagem-item i {
+    font-size: 3rem;
+    color: #9f6199;
+}
+
+.vantagem-item p {
+    color: #795976;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 
 /*SEÇÃO4 - JÚLIO CÉSAR */
 :root { 
@@ -345,91 +357,124 @@ body {
     --texto-cor: #555;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+}
 
+/* Ocupa 100% da largura da tela sem margens */
 .container-secao1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     width: 100%;
+    display: block;
 }
 
 .card-noivas { 
     background: #fff; 
     display: flex; 
-    align-items: center; 
-    max-width: 1000px; 
-    width: 100%;
-    overflow: hidden; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%; /* Largura total */
+    min-height: 100%; /* Permite que cresça com o conteúdo */
+    align-items: stretch;
 }
 
+/* Bloco da Imagem - Agora com largura percentual rígida para responder ao zoom */
 .bloco-imagem { 
-    flex: 0 0 45%; 
-    display: flex; 
-    align-items: center;
+    width: 50%; 
+    display: flex;
 }
 
 .bloco-imagem img { 
     width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-    border-radius: 0 50px 50px 0; 
-    transform: scale(1.05); /* Pequeno ajuste de escala para preenchimento */
+    height: auto; /* Permite que a altura mude proporcionalmente ao zoom */
+    display: block;
+    object-fit: cover;
+    border-radius: 0 50px 50px 0;
 }
 
+/* Bloco de Texto - Também com 50% */
 .bloco-texto { 
-    flex: 1; 
-    padding: 40px 60px; 
+    width: 50%; 
+    padding: 5vw; /* Padding proporcional à largura da tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: var(--texto-cor); 
 }
 
 .bloco-texto h1 { 
     color: var(--cor-primaria); 
-    font-size: 2.1rem; 
-    margin-bottom: 20px; 
+    font-size: 3vw; /* Fonte cresce/diminui com o zoom da página */
+    margin-bottom: 1.5vw; 
     line-height: 1.1; 
 }
 
 .bloco-texto p { 
-    font-size: 1.05rem; 
+    font-size: 1.2vw;
     line-height: 1.5; 
-    margin-bottom: 8px; 
+    margin-bottom: 2vw; 
 }
 
-.bloco-texto strong { color: var(--cor-primaria); }
-
-.info-validade { 
-    display: block;
-    color: #999; 
-    font-size: 0.9rem; 
-    margin-bottom: 35px; 
+/* Configuração dos Botões um abaixo do outro */
+.acoes { 
+    display: flex; 
+    flex-direction: column; /* Coloca um abaixo do outro */
+    gap: 15px; 
+    width: 100%;
 }
-
-.acoes { display: flex; flex-direction: column; gap: 15px; }
 
 .btn-link { 
+    width: 100%; /* Botões ocupam toda a largura do bloco de texto */
+    max-width: 400px; /* Limite para não ficarem largos demais em telas gigantes */
     background: var(--cor-botao); 
     color: var(--cor-primaria); 
     text-decoration: none; 
-    padding: 14px 20px; 
+    padding: 18px; 
     font-weight: bold; 
-    font-size: 0.9rem; 
+    font-size: 1rem; 
     display: flex; 
     align-items: center; 
-    gap: 12px; 
+    justify-content: center; 
+    gap: 10px; 
     transition: all 0.3s ease; 
 }
 
-.btn-link:hover { filter: brightness(0.95); transform: translateX(5px); }
-
-@media (max-width: 850px) {
-    .card-noivas { flex-direction: column; border-radius: 30px; }
-    .bloco-imagem { flex: none; width: 100%; }
-    .bloco-imagem img { border-radius: 30px; transform: none; }
-    .bloco-texto { padding: 30px; text-align: center; }
-    .btn-link { justify-content: center; }
+.btn-link:hover { 
+    filter: brightness(0.9);
+    transform: scale(1.02);
 }
 
+/* Responsividade para telas menores que 850px */
+@media (max-width: 850px) {
+    .card-noivas { 
+        flex-direction: column; 
+    }
+    
+    .bloco-imagem, .bloco-texto { 
+        width: 100%; 
+    }
+    
+    .bloco-imagem img { 
+        border-radius: 0; 
+    }
+    
+    .bloco-texto h1 { font-size: 2rem; }
+    .bloco-texto p { font-size: 1.1rem; }
+}
 
+/*SEÇÃO5 - Gabriel Antunes */
+.secao-contato {
+    background-color: #fdf5f2; /* Tom pastel de fundo conforme imagem */
+}
+
+.formulario-contato .form-control {
+    background-color: #f8f9fa;
+}
+
+.formulario-contato .btn-primary {
+    background-color: #795976;
+}
+
+.formulario-contato .btn-primary:hover {
+    background-color: #9f6199;
+}
